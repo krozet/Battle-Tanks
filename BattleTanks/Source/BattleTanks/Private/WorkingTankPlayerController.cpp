@@ -39,14 +39,18 @@ void AWorkingTankPlayerController::AimTowardsCrosshair()
 	///Has "side effect", is going to line trace
 	if (GetSightRayHitLocation(HitLocation))
 	{
-		UE_LOG(LogTemp, Warning, TEXT("HitLocation: %s"), *HitLocation.ToString())
+		//UE_LOG(LogTemp, Warning, TEXT("Look Direction: %s"), *HitLocation.ToString())
 	}
 }
 
 
-//Get world location of linetrace through crosshair, true if hits landscape
+//Get world location of line trace through cross hair, true if hits landscape
 bool AWorkingTankPlayerController::GetSightRayHitLocation(FVector& OutHitLocation) const
 {
-	OutHitLocation = FVector(1.0);
+	///Find cross hair position in pixel coordinates
+	int32 ViewportSizeX, ViewportSizeY;
+	GetViewportSize(ViewportSizeX, ViewportSizeY);
+	auto ScreenLocation = FVector2D(ViewportSizeX * CrossHairXLocation, ViewportSizeY * CrossHairYLocation);
+
 	return true;
 }

@@ -19,8 +19,16 @@ public:
 	virtual void BeginPlay() override;
 	virtual void Tick( float DeltaTime ) override;
 private:
+
+	UPROPERTY(EditAnywhere)
+		float CrossHairXLocation = 0.5;
+
+	UPROPERTY(EditAnywhere)
+		float CrossHairYLocation = 0.3333333;
+
 	//Start the tank moving the barrel so that a show would hit where
-	//the crosshairs intersects the world
+	//the cross hairs intersects the world
 	void AimTowardsCrosshair();
+
 	bool GetSightRayHitLocation(FVector& OutHitLocation) const;
 };
