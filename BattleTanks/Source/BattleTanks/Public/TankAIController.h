@@ -18,7 +18,6 @@ private:
 
 public:
 
-
 	AWorkingTank* GetControlledTank() const;
 
 	virtual void BeginPlay() override;

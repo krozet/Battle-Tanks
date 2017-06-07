@@ -40,5 +40,5 @@ void AWorkingTank::SetupPlayerInputComponent(class UInputComponent* InputCompone
 
 void AWorkingTank::AimAt(FVector HitLocation)
 {
-	TankAimingComponent->AimAt(HitLocation);
+	TankAimingComponent->AimAt(HitLocation, LaunchSpeed);
 }
