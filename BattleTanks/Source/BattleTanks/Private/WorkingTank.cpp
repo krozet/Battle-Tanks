@@ -4,6 +4,11 @@
 #include "WorkingTank.h"
 
 
+void AWorkingTank::SetBarrelReference(UStaticMeshComponent * BarrelToSet)
+{
+	TankAimingComponent->SetBarrelReference(BarrelToSet);
+}
+
 // Sets default values
 AWorkingTank::AWorkingTank()
 {
