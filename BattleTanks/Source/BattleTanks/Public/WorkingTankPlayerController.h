@@ -17,8 +17,9 @@ class BATTLETANKS_API AWorkingTankPlayerController : public APlayerController
 public:
 	AWorkingTank* GetControlledTank() const;
 	virtual void BeginPlay() override;
-	virtual void Tick( float DeltaTime ) override;
+
 private:
+	virtual void Tick(float DeltaTime) override;
 
 	UPROPERTY(EditAnywhere)
 		float CrossHairXLocation = 0.5;
