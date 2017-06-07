@@ -4,7 +4,7 @@
 #include "WorkingTank.h"
 
 
-void AWorkingTank::SetBarrelReference(UStaticMeshComponent * BarrelToSet)
+void AWorkingTank::SetBarrelReference(UTankBarrel* BarrelToSet)
 {
 	TankAimingComponent->SetBarrelReference(BarrelToSet);
 }
