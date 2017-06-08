@@ -20,6 +20,7 @@ void AWorkingTankPlayerController::Tick(float DeltaTime)
 {
 	Super::Tick(DeltaTime);
 	AimTowardsCrosshair();
+	UE_LOG(LogTemp, Warning, TEXT("Seconds: %f"), GetWorld()->TimeSeconds)
 }
 
 AWorkingTank* AWorkingTankPlayerController::GetControlledTank() const
