@@ -2,13 +2,11 @@
 
 #pragma once
 
-#include "WorkingTank.h"
 #include "GameFramework/PlayerController.h"
 #include "WorkingTankPlayerController.generated.h"
 
-/**
- * 
- */
+class AWorkingTank;
+
 UCLASS()
 class BATTLETANKS_API AWorkingTankPlayerController : public APlayerController
 {
