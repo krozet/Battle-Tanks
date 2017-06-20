@@ -10,6 +10,11 @@ void AWorkingTank::SetBarrelReference(UTankBarrel* BarrelToSet)
 	TankAimingComponent->SetBarrelReference(BarrelToSet);
 }
 
+void AWorkingTank::SetTurretReference(UWorkingTankTurret* TurretToSet)
+{
+	TankAimingComponent->SetTurretReference(TurretToSet);
+}
+
 // Sets default values
 AWorkingTank::AWorkingTank()
 {

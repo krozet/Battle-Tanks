@@ -6,6 +6,7 @@
 #include "WorkingTank.generated.h"
 
 class UTankBarrel;
+class UWorkingTankTurret;
 class UTankAimingComponent;
 
 UCLASS()
@@ -18,6 +19,9 @@ public:
 
 	UFUNCTION(BlueprintCallable, Category = Setup)
 	void SetBarrelReference(UTankBarrel* BarrelToSet);
+
+	UFUNCTION(BlueprintCallable, Category = Setup)
+	void SetTurretReference(UWorkingTankTurret* TurretToSet);
 
 private:
 	// Sets default values for this pawn's properties
